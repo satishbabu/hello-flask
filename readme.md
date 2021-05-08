@@ -19,3 +19,6 @@ pip3 install flask
 python3 basic.py
 
 ```
+
+## Debug
+Set the debug to True "app.run(debug=True)".  Note down the PIN from the console and then Python allows debug from the webpage.  Note that this has to be turned off in production.
