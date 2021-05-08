@@ -4,12 +4,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('basic.html')
+    return render_template('home.html')
 
 
-@app.route('/hello/<name>')
+@app.route('/puppy/<name>')
 def hello_name(name):
-    return render_template('hello.html', p_name=name)
+    return render_template('puppy.html', name=name)
 
 @app.route('/puppies')
 def display_puppies():
