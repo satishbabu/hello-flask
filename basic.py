@@ -9,7 +9,7 @@ def index():
 
 @app.route('/hello/<name>')
 def hello_name(name):
-    return "<h1>Hello {}!<h1>".format(name)
+    return render_template('hello.html', p_name=name)
 
 
 if __name__ == '__main__':
