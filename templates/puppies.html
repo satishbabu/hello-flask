@@ -9,8 +9,15 @@
     <h1>Puppy Names</h1>
     <ul>
       {% for pup in puppies%} 
-      <li> {{pup}} </li>
+          <li> {{pup}} </li>
       {% endfor %}
+
     </ul>
+
+    {% if 'Mowgli' in puppies %}
+        <h2>Found you Mowgli</h2>
+    {% else %}
+        <p>Hmm.. Mowgli was not found</p>
+    {% endif %}
   </body>
 </html>
