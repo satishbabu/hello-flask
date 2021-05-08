@@ -1,14 +1,21 @@
-# Flask-Hello
+# hello-flask
 Simple flask program
 
-## Pythnon Setup
-Craete a virtual environment
+## Python Setup
+
+Craete a pythgon virtual environment to keep the dependencies independent.  Activate the enviornemnt and then install flask in it.
 
 ```linux
 sudo apt-get install python3-venv
-python3 -m venv flask-hello 
-source bin/activate 
+cd ~/projects
+python3 -m venv flask-python-venv
+source ~/proejcts/bin/activate 
 pip3 install flask
 ```
-Above creates a virtual env and keeps the dependendcies for this project.   Activate the environemnt and then install flask in it.
 
+## Run
+
+```linux
+python3 basic.py
+
+```
