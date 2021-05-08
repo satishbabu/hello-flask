@@ -27,3 +27,8 @@ kill <pid>
 
 ## Debug
 Set the debug to True "app.run(debug=True)".  Note down the PIN from the console and then Python allows debug from the webpage.  Note that this has to be turned off in production.
+
+## Jinga Template
+Jinga support passing data from python to html.  Pass parameter in render_templtae and refer to it inside 2 sets of curly braces as {{my_variable}}.
+
+Control flow statements reqire to be enclosed in {% %}
