@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -24,5 +25,7 @@ def page_not_found(e):
 
 
 if __name__ == '__main__':
+    # This is used when running locally only. When deploying to Google App
+    # Engine, a webserver process such as Gunicorn will serve the app
     app.run(debug=True)
 

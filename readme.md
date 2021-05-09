@@ -13,7 +13,14 @@ source ~/projects/flask-python-env/bin/activate
 pip3 install flask
 ```
 
-## Run
+Create requirements.txt.  Ensure  source command above has been run
+```linux
+pip3 install pipreqs
+pipreqs ~/projects/hello-flask --force
+```
+
+
+## Run locally
 
 ```linux
 python3 basic.py
@@ -24,6 +31,20 @@ If port is already being used then identify the program and stop it.
 lsof | grep 5000 
 kill <pid>
 ```
+
+## Deploy to google app engine
+
+```linux
+
+-- List projects and ensure correct project is being used
+gcloud config list project 
+
+-- deploy the app
+gcloud app deploy
+
+
+```
+
 
 ## Debug
 Set the debug to True "app.run(debug=True)".  Note down the PIN from the console and then Python allows debug from the webpage.  Note that this has to be turned off in production.
