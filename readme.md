@@ -45,6 +45,16 @@ gcloud app deploy
 
 ```
 
+## Automate appEngine deployment
+
+Enable the AppEngineAdmin and Cloud Build APIs
+TODO: do this from terraform scripts
+
+Grant App Engine access to the Cloud Build service account
+
+Create a build trigger
+
+More details are at https://cloud.google.com/source-repositories/docs/quickstart-triggering-builds-with-source-repositories
 
 ## Debug
 Set the debug to True "app.run(debug=True)".  Note down the PIN from the console and then Python allows debug from the webpage.  Note that this has to be turned off in production.
