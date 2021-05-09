@@ -56,10 +56,27 @@ Create a build trigger
 
 More details are at https://cloud.google.com/source-repositories/docs/quickstart-triggering-builds-with-source-repositories
 
+
+Build trigger failed with an error and I had run the below from the WSL Linux console
+
+```linux
+PROJECT_ID=xxxxxx
+
+PROJECT_NUMBER=$(gcloud projects list \
+  --format="value(projectNumber)" \
+  --filter="projectId=${PROJECT_ID}")
+
+gcloud iam service-accounts add-iam-policy-binding \
+    ${PROJECT_ID}@appspot.gserviceaccount.com \
+    --member=serviceAccount:${PROJECT_NUMBER}@cloudbuild.gserviceaccount.com \
+    --role=roles/iam.serviceAccountUser \
+    --project=${PROJECT_ID}
+```
+
 ## Debug
 Set the debug to True "app.run(debug=True)".  Note down the PIN from the console and then Python allows debug from the webpage.  Note that this has to be turned off in production.
 
-## Jinga Template
+## Jinja Template
 Jinga support passing data from python to html.  Pass parameter in render_templtae and refer to it inside 2 sets of curly braces as {{my_variable}}.
 
 Control flow statements reqire to be enclosed in {% %}
