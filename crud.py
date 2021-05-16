@@ -1,7 +1,7 @@
 from basic import db, Puppy
 
 
-# Create 
+# Create
 my_puppy = Puppy('Rufus', 5)
 db.session.add(my_puppy)
 db.session.commit()
@@ -14,7 +14,7 @@ Puppy.query.all()
 Puppy.query.get(1)
 
 # Filters
-frankie=Puppy.query.filter_by(name='Frankie')
+frankie = Puppy.query.filter_by(name='Frankie')
 print(frankie.all())
 
 # Update
