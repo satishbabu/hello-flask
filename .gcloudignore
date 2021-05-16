@@ -20,5 +20,8 @@ __pycache__/
 
 # Visual code 
 hello-flask.code-workspace
+.vscode
+migrations
 
 readme.md
+
